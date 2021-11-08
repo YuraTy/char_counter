@@ -8,10 +8,9 @@ import java.util.StringJoiner;
 
 public class Counter implements CounterInterface {
 
-    private final Map<Character, Integer> mapCharacter = new LinkedHashMap<>();
-
     @Override
     public String charCounter(String string) {
+        Map<Character, Integer> mapCharacter = new LinkedHashMap<>();
         StringJoiner stringJoiner = new StringJoiner("\n");
         char[] arrayChar = string.toCharArray();
         for (char uniqueSymbol : arrayChar) {

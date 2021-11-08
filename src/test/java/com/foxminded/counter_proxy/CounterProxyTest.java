@@ -29,8 +29,8 @@ class CounterProxyTest {
 
     @Test
     void charCounter() {
-        Mockito.when(counter.charCounter("hello world")).thenReturn(null).thenReturn(stringExpected);
-        Assertions.assertNull(null, counter.charCounter("hello world"));
+        Mockito.when(counter.charCounter("hello world")).thenReturn(null,stringExpected);
+        counter.charCounter("hello world");
         Assertions.assertEquals(stringExpected, counter.charCounter("hello world"));
     }
 }
