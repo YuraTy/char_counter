@@ -1,4 +1,4 @@
-package com.foxminded.counter_proxy;
+package com.foxminded.counterProxy;
 
 import com.foxminded.counter.Counter;
 import org.junit.jupiter.api.Assertions;
@@ -20,17 +20,17 @@ class CounterProxyTest {
                     "\"d\" - 1";
 
     @Mock
-    private Counter counter;
+    private Counter counterMock;
 
     @BeforeEach
     void init() {
-        counter = Mockito.mock(Counter.class);
+        counterMock = Mockito.mock(Counter.class);
     }
 
     @Test
     void charCounter() {
-        Mockito.when(counter.charCounter("hello world")).thenReturn(null,stringExpected);
-        counter.charCounter("hello world");
-        Assertions.assertEquals(stringExpected, counter.charCounter("hello world"));
+        Mockito.when(counterMock.charCounter("hello world")).thenReturn(stringExpected);
+        counterMock.charCounter("hello world");
+        Mockito.verify(counterMock).charCounter("hello world");
     }
 }

@@ -1,6 +1,6 @@
-package com.foxminded.CharCounter;
+package com.foxminded.charCounter;
 
-import com.foxminded.counter_proxy.CounterProxy;
+import com.foxminded.counterProxy.CounterProxy;
 import com.foxminded.couterInterface.CounterInterface;
 
 public class CharCounter {

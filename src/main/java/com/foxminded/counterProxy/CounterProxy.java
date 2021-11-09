@@ -1,4 +1,4 @@
-package com.foxminded.counter_proxy;
+package com.foxminded.counterProxy;
 
 import com.foxminded.counter.Counter;
 import com.foxminded.couterInterface.CounterInterface;

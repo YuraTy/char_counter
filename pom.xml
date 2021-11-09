@@ -48,7 +48,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.foxminded.CharCounter.CharCounter</mainClass>
+                            <mainClass>com.foxminded.charCounter.CharCounter</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
