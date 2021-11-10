@@ -11,6 +11,11 @@ public class CounterProxy implements CounterInterface {
     private final CounterInterface counterInterface = new Counter();
     private final Map<String, String> mapCache = new HashMap<>();
 
+    public CounterProxy(Counter counterMock) {
+    }
+    public CounterProxy() {
+    }
+
     @Override
     public String charCounter(String string) {
         mapCache.computeIfAbsent(string, key -> counterInterface.charCounter(string));
