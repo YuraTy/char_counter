@@ -35,7 +35,7 @@ class CounterProxyTest {
         counterProxy.charCounter(EXPECTED_WORD);
         counterProxy.charCounter(EXPECTED_WORD);
         String result = counterProxy.charCounter(EXPECTED_WORD);
-        Mockito.verify(counterInterface).charCounter(Mockito.eq(EXPECTED_WORD));
+        Mockito.verify(counterInterface,Mockito.times(1)).charCounter(Mockito.eq(EXPECTED_WORD));
         Assertions.assertEquals(result,stringExpected);
     }
 }
