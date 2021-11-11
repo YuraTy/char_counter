@@ -1,20 +1,12 @@
 package com.foxminded.counterProxy;
-
-import com.foxminded.counter.Counter;
 import com.foxminded.couterInterface.CounterInterface;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class CounterProxy implements CounterInterface {
 
-    private final CounterInterface counterInterface = new Counter();
+    private  CounterInterface counterInterface;
     private final Map<String, String> mapCache = new HashMap<>();
-
-    public CounterProxy(Counter counterMock) {
-    }
-    public CounterProxy() {
-    }
 
     @Override
     public String charCounter(String string) {
